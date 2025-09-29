@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Analysis - StockAI</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">StockAI</div>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="predictions.html">Predictions</a></li>
+            <li><a href="analysis.html" class="active">Market Analysis</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="analysis-section">
+            <h1>Market Analysis</h1>
+            
+            <div class="analysis-tools">
+                <div class="tool-selector">
+                    <button class="tool-btn active" onclick="switchTool('technical')">Technical Analysis</button>
+                    <button class="tool-btn" onclick="switchTool('fundamental')">Fundamental Analysis</button>
+                    <button class="tool-btn" onclick="switchTool('sentiment')">Market Sentiment</button>
+                </div>
+            </div>
+
+            <div class="analysis-content">
+                <!-- Technical Analysis Section -->
+                <div class="analysis-panel active" id="technical-panel">
+                    <div class="chart-container">
+                        <div class="chart-controls">
+                            <select id="timeframe">
+                                <option value="1d">1 Day</option>
+                                <option value="1w">1 Week</option>
+                                <option value="1m">1 Month</option>
+                                <option value="3m">3 Months</option>
+                                <option value="1y">1 Year</option>
+                            </select>
+                            <select id="indicators">
+                                <option value="sma">SMA</option>
+                                <option value="ema">EMA</option>
+                                <option value="rsi">RSI</option>
+                                <option value="macd">MACD</option>
+                            </select>
+                        </div>
+                        <canvas id="technicalChart"></canvas>
+                    </div>
+
+                    <div class="indicator-grid">
+                        <div class="indicator-card">
+                            <h3>Moving Averages</h3>
+                            <div class="indicator-data">
+                                <div class="data-row">
+                                    <span>MA(20):</span>
+                                    <span class="value">185.32</span>
+                                </div>
+                                <div class="data-row">
+                                    <span>MA(50):</span>
+                                    <span class="value">180.45</span>
+                                </div>
+                                <div class="data-row">
+                                    <span>MA(200):</span>
+                                    <span class="value">175.90</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="indicator-card">
+                            <h3>Oscillators</h3>
+                            <div class="indicator-data">
+                                <div class="data-row">
+                                    <span>RSI(14):</span>
+                                    <span class="value">62.5</span>
+                                </div>
+                                <div class="data-row">
+                                    <span>Stochastic:</span>
+                                    <span class="value">75.3</span>
+                                </div>
+                                <div class="data-row">
+                                    <span>CCI:</span>
+                                    <span class="value">124.8</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="indicator-card">
+                            <h3>Trend Indicators</h3>
+                            <div class="indicator-data">
+                                <div class="data-row">
+                                    <span>MACD:</span>
+                                    <span class="value positive">Bullish</span>
+                                </div>
+                                <div class="data-row">
+                                    <span>ADX:</span>
+                                    <span class="value">28.4</span>
+                                </div>
+                                <div class="data-row">
+                                    <span>Trend:</span>
+                                    <span class="value positive">Uptrend</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fundamental Analysis Section -->
+                <div class="analysis-panel" id="fundamental-panel">
+                    <div class="fundamental-metrics">
+                        <div class="metric-card">
+                            <h3>Valuation Metrics</h3>
+                            <div class="metric-data">
+                                <div class="data-row">
+                                    <span>P/E Ratio:</span>
+                                    <span>28.5</span>
+                                </div>
+                                <div class="data-row">
+                                    <span>P/B Ratio:</span>
+                                    <span>6.2</span>
+                                </div>
+                                <div class="data-row">
+                                    <span>PEG Ratio:</span>
+                                    <span>1.8</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Market Sentiment Section -->
+                <div class="analysis-panel" id="sentiment-panel">
+                    <div class="sentiment-overview">
+                        <div class="sentiment-score">
+                            <h3>Overall Market Sentiment</h3>
+                            <div class="score-value positive">75%</div>
+                            <div class="score-label">Bullish</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 StockAI - All rights reserved</p>
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/chart.js"></script>
+    <script src="js/analysis.js"></script>
+</body>
+</html>

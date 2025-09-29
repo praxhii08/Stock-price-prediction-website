@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Predictions - StockAI</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">StockAI</div>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="predictions.html" class="active">Predictions</a></li>
+            <li><a href="analysis.html">Market Analysis</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="predictions-section">
+            <h1>Stock Predictions</h1>
+            
+            <div class="search-box">
+                <input type="text" id="stockSearch" placeholder="Enter stock symbol (e.g., AAPL)">
+                <button class="btn" onclick="searchStock()">Search</button>
+            </div>
+
+            <div class="prediction-result" id="predictionResult">
+                <div class="stock-info">
+                    <h2>AAPL - Apple Inc.</h2>
+                    <div class="current-price">
+                        <span class="label">Current Price:</span>
+                        <span class="value">$190.45</span>
+                    </div>
+                </div>
+
+                <div class="prediction-cards">
+                    <div class="prediction-card">
+                        <h3>24h Prediction</h3>
+                        <div class="prediction-value up">$193.20</div>
+                        <div class="prediction-change">+1.44%</div>
+                        <div class="confidence">Confidence: 85%</div>
+                    </div>
+
+                    <div class="prediction-card">
+                        <h3>7 Day Prediction</h3>
+                        <div class="prediction-value up">$195.80</div>
+                        <div class="prediction-change">+2.81%</div>
+                        <div class="confidence">Confidence: 78%</div>
+                    </div>
+
+                    <div class="prediction-card">
+                        <h3>30 Day Prediction</h3>
+                        <div class="prediction-value up">$201.30</div>
+                        <div class="prediction-change">+5.70%</div>
+                        <div class="confidence">Confidence: 72%</div>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <canvas id="predictionChart"></canvas>
+                </div>
+
+                <div class="analysis-details">
+                    <h3>Technical Analysis</h3>
+                    <div class="indicators">
+                        <div class="indicator">
+                            <span class="label">RSI:</span>
+                            <span class="value">62.5</span>
+                        </div>
+                        <div class="indicator">
+                            <span class="label">MACD:</span>
+                            <span class="value positive">Bullish</span>
+                        </div>
+                        <div class="indicator">
+                            <span class="label">Moving Average:</span>
+                            <span class="value positive">Above</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 StockAI - All rights reserved</p>
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/chart.js"></script>
+    <script src="js/predictions.js"></script>
+</body>
+</html>

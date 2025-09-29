@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockAI - Intelligent Stock Predictions</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">StockAI</div>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="predictions.html">Predictions</a></li>
+            <li><a href="analysis.html">Market Analysis</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h1>Welcome to StockAI</h1>
+        <p>AI-Powered Stock Predictions and Market Analysis</p>
+    </div>
+
+    <main class="container">
+        <section class="features">
+            <div class="feature-card">
+                <h2>Real-Time Predictions</h2>
+                <p>Get instant AI-powered predictions for thousands of stocks</p>
+                <a href="predictions.html" class="btn">Try Now</a>
+            </div>
+            <div class="feature-card">
+                <h2>Market Analysis</h2>
+                <p>Advanced tools for technical and fundamental analysis</p>
+                <a href="analysis.html" class="btn">Analyze Markets</a>
+            </div>
+            <div class="feature-card">
+                <h2>Historical Trends</h2>
+                <p>Compare historical data and patterns</p>
+                <a href="analysis.html#historical" class="btn">View Trends</a>
+            </div>
+        </section>
+
+        <section class="market-summary">
+            <h2>Market Summary</h2>
+            <div class="market-grid">
+                <div class="market-item">
+                    <h3>S&P 500</h3>
+                    <div class="price up" id="sp500">4,890.97</div>
+                    <div class="change">+1.2%</div>
+                </div>
+                <div class="market-item">
+                    <h3>NASDAQ</h3>
+                    <div class="price down" id="nasdaq">15,360.28</div>
+                    <div class="change">-0.3%</div>
+                </div>
+                <div class="market-item">
+                    <h3>DOW</h3>
+                    <div class="price up" id="dow">37,490.17</div>
+                    <div class="change">+0.8%</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 StockAI - All rights reserved</p>
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
